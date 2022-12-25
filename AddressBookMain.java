@@ -7,14 +7,15 @@ public class AddressBookMain {
         AddressBook addressBook1 = new AddressBook();
         boolean flag = true;
         while (flag) {
-            System.out.println("----------------LIST OF OPERATIONS------------");
+            System.out.println("----------------LIST ------------");
             System.out.println("[1] :Add New Address Book");
             System.out.println("[2] :View all the contacts from AddressBook");
             System.out.println("[3] :Search Contact from a city");
             System.out.println("[4] :Search Contact from a State");
             System.out.println("[5] :Search City of which u want the count of contacts");
             System.out.println("[6] :Sort by Name" );
-            System.out.println("[7] :Exit");
+            System.out.println("[7] :Sort by Zip" );
+            System.out.println("[8] :Exit");
             System.out.println("Enter choice: ");
             int option = sc.nextInt();
             switch (option) {
@@ -68,9 +69,10 @@ public class AddressBookMain {
                 case 6:
                     addressBook1.sortByName();
                     break;
-
-
                 case 7:
+                    addressBook1.sortByZip();
+                    break;
+                case 8:
                     flag = false;
                     break;
             }
